@@ -1,0 +1,22 @@
+
+
+server:
+  port: 8081
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          mywebclient:
+           client-id: myclient
+           client-secret: Wna8BGXiGIhmnzr7T1UQKb2260ruZhWB
+           authorization-grant-type: client_credentials
+           
+        provider:
+          mywebclient:
+            issuer-uri: http://localhost:8080/realms/myrealm
+            token-uri: http://localhost:8080/realms/myrealm/protocol/openid-connect/token
+            
+          
+            
